@@ -25,7 +25,6 @@ import systems.kinau.fishingbot.modules.ModuleManager;
 import systems.kinau.fishingbot.modules.command.ChatCommandModule;
 import systems.kinau.fishingbot.modules.command.CommandRegistry;
 import systems.kinau.fishingbot.modules.command.executor.CommandExecutor;
-import systems.kinau.fishingbot.modules.discord.DiscordModule;
 import systems.kinau.fishingbot.modules.ejection.EjectionModule;
 import systems.kinau.fishingbot.modules.timer.TimerModule;
 import systems.kinau.fishingbot.network.mojangapi.MojangAPI;
@@ -270,9 +269,6 @@ public class Bot {
         return (EjectionModule) getModuleManager().getLoadedModule(EjectionModule.class).orElse(null);
     }
 
-    public DiscordModule getDiscordModule() {
-        return (DiscordModule) getModuleManager().getLoadedModule(DiscordModule.class).orElse(null);
-    }
 
     public void start(CommandLine cmdLine) {
         if (isRunning() || isPreventStartup()) {
@@ -362,8 +358,6 @@ public class Bot {
                 if (getConfig().isStartTextEnabled())
                     getModuleManager().enableModule(new ChatCommandModule());
 
-                if (getConfig().isWebHookEnabled())
-                    getModuleManager().enableModule(new DiscordModule());
 
                 if (getConfig().isAutoLootEjectionEnabled())
                     getModuleManager().enableModule(new EjectionModule());

@@ -46,7 +46,6 @@ public class GUIController implements Listener {
 
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
-        // empty
     }
 
     public void exit(Event e) {
@@ -54,7 +53,6 @@ public class GUIController implements Listener {
     }
 
     public void deleteAllData(Event e) {
-        // Do nothing
     }
 
     public void github(Event e) {
