@@ -1,4 +1,4 @@
-Minecraft 1.8~1.21.x AFK&AutoTasks bot (Forked from MrKinau/FishingBot)
+# Minecraft 1.8~1.21.x AFK&AutoTasks bot (Forked from MrKinau/FishingBot)
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/22e2d15847fb4deaaed97efc3b755ebd)](https://www.codacy.com/gh/MrKinau/FishingBot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MrKinau/FishingBot&amp;utm_campaign=Badge_Grade)
 [![GitHub issues](https://img.shields.io/github/issues/MrKinau/FishingBot)](https://github.com/MrKinau/FishingBot/issues)
