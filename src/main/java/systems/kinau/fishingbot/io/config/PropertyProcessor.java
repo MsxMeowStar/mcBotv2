@@ -6,7 +6,6 @@ package systems.kinau.fishingbot.io.config;
 
 import com.google.gson.*;
 import systems.kinau.fishingbot.FishingBot;
-import systems.kinau.fishingbot.bot.registry.legacy.LegacyEnchantmentType;
 import systems.kinau.fishingbot.utils.ConvertUtils;
 import systems.kinau.fishingbot.utils.ReflectionUtils;
 
@@ -84,50 +83,6 @@ public class PropertyProcessor {
         if (key.equals("start-text.text") && !value.toString().startsWith("[")) {
             FishingBot.getI18n().info("config-converting");
             ReflectionUtils.setField(field, config, Arrays.asList(value.getAsString().split(";")));
-            try {
-                Field discordField1 = config.getClass().getDeclaredField("webHookEnabled");
-                Field discordField2 = config.getClass().getDeclaredField("webHook");
-
-                Object value1 = getValueByDottedKey(configJson, "discord.enabled");
-                if (value1 != null) {
-                    value1 = ConvertUtils.fromConfigValue(jsonToString((JsonElement) value1), boolean.class, boolean.class);
-                    ReflectionUtils.setField(discordField1, config, value1);
-                }
-
-                Object value2 = getValueByDottedKey(configJson, "discord.web-hook");
-                if (value2 != null) {
-                    value2 = ConvertUtils.fromConfigValue(jsonToString((JsonElement) value2), String.class, String.class);
-                    ReflectionUtils.setField(discordField2, config, value2);
-                }
-            } catch (NoSuchFieldException ignore) { }
-            return true;
-        } else if (key.equals("announces.discord.ping-on-enchantment.enchantments") && value.isJsonArray()) {
-            JsonArray enchantmentsArray = value.getAsJsonArray();
-            List<String> enchantments = new ArrayList<>();
-            for (JsonElement element : enchantmentsArray) {
-                enchantments.add(element.getAsString());
-            }
-
-            boolean anyUpperCase = false;
-            for (String enchantment : enchantments) {
-                for (char c : enchantment.toCharArray()) {
-                    if (Character.isUpperCase(c)) {
-                        anyUpperCase = true;
-                        break;
-                    }
-                }
-            }
-
-            if (!anyUpperCase)
-                return false;
-
-            List<String> newNames = new ArrayList<>();
-            for (String enchantment : enchantments) {
-                try {
-                    newNames.add(LegacyEnchantmentType.valueOf(enchantment).getName());
-                } catch (Throwable ignore) {}
-            }
-            ReflectionUtils.setField(field, config, newNames);
             return true;
         }
         return false;
@@ -232,7 +187,6 @@ public class PropertyProcessor {
             case "start-text.enabled": return "start-text-enabled";
             case "start-text.text": return "start-text";
             case "server.default-protocol": return "default-protocol";
-            case "discord.web-hook": return "discord-webHook";
             case "auto.auto-disconnect": return "auto-disconnect";
             case "auto.auto-disconnect-players-threshold": return "auto-disconnect-players-threshold";
             case "misc.stucking-fix-enabled": return "stucking-fix-enabled";

@@ -65,16 +65,6 @@ public class SettingsConfig implements Config {
     @Property(key = "logs.log-entity-data", description = "config-logs-log-entity-data") private boolean logEntityData = false;
     @Property(key = "logs.log-item-data", description = "config-logs-log-item-data") private boolean logItemData = false;
 
-    @Property(key = "announces.discord.enabled", description = "config-announces-discord") private boolean webHookEnabled = false;
-    @Property(key = "announces.discord.web-hook", description = "config-announces-discord-web-hook") private String webHook = "YOURWEBHOOK";
-    @Property(key = "announces.discord.alert-on-attack", description = "config-announces-discord-alert-on-attack") private boolean alertOnAttack = true;
-    @Property(key = "announces.discord.alert-on-respawn", description = "config-announces-discord-alert-on-respawn") private boolean alertOnRespawn = true;
-    @Property(key = "announces.discord.alert-on-level-update", description = "config-announces-discord-alert-on-level-update") private boolean alertOnLevelUpdate = true;
-    @Property(key = "announces.discord.ping-on-enchantment.enabled", description = "config-announces-discord-ping-on-enchantment") private boolean pingOnEnchantmentEnabled = false;
-    @Property(key = "announces.discord.ping-on-enchantment.mention", description = "config-announces-discord-ping-on-enchantment-mention") private String pingOnEnchantmentMention = "<@USER_ID>";
-    @Property(key = "announces.discord.ping-on-enchantment.items", description = "config-announces-discord-ping-on-enchantment-items") private List<String> pingOnEnchantmentItems = Collections.singletonList("enchanted_book");
-    @Property(key = "announces.discord.ping-on-enchantment.enchantments", description = "config-announces-discord-ping-on-enchantment-enchantments") private List<String> pingOnEnchantmentEnchantments = Arrays.asList("mending","unbreaking");
-
     @Property(key = "announces.announce-lvl-up", description = "config-announces-announce-lvl-up") private boolean announceLvlUp = true;
     @Property(key = "announces.announce-lvl-up-text", description = "config-announces-announce-lvl-up-text") private String announceLvlUpText = "I am level %lvl% now";
 
