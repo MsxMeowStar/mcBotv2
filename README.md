@@ -1,4 +1,5 @@
 Minecraft 1.8 - 1.21.7 AFK&AutoTasks bot
+Forked from MrKinau/FishingBot
 =============
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/22e2d15847fb4deaaed97efc3b755ebd)](https://www.codacy.com/gh/MrKinau/FishingBot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MrKinau/FishingBot&amp;utm_campaign=Badge_Grade)
 [![GitHub issues](https://img.shields.io/github/issues/MrKinau/FishingBot)](https://github.com/MrKinau/FishingBot/issues)
@@ -98,3 +99,4 @@ You are free to create a fork, or a pull request to participate. You also can re
 If you want to help translating this project into your mother language, we appreciate any help. Just signup at Crowdin and start translating the [project](https://crowdin.com/project/fishingbot).
 
 ## Original Author: MrKinau
+Forked from MrKinau/FishingBot
