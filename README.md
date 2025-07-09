@@ -97,5 +97,4 @@ You are free to create a fork, or a pull request to participate. You also can re
 
 If you want to help translating this project into your mother language, we appreciate any help. Just signup at Crowdin and start translating the [project](https://crowdin.com/project/fishingbot).
 
-## Credits
-Thanks to [Torchbot](https://github.com/woder/TorchBot) for a code base. I've just stolen the half project lol.
+## Original Author: MrKinau
